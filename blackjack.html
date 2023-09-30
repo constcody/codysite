@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://kit.fontawesome.com/557c7a7f4e.js" crossorigin="anonymous"></script>
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<meta charset="utf-8" />
+<title>Blackjack</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
+<link href="cody.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script src="bj.js"></script>
+
+<head>
+  <nav>
+    <menu>
+      <menuitem id="demo1">
+      <a>Menu :)</a>
+      <menu>
+        <menuitem><a href="index.html" style="text-decoration: none">Home Page <i class="fa-solid fa-house"></i></a>
+        </menuitem>
+        <menuitem> <a>Projects</a>
+        <menu>
+          <menuitem><a href="weather.html" style="text-decoration: none">Weather App</a></menuitem>
+          <menuitem><a>WIP</a></menuitem>
+          <menuitem><a>WIP</a></menuitem>
+        </menu>
+        </menuitem>
+        <menuitem id="demo2">
+        <a>Random Games</a>
+        <menu>
+          <menuitem><a href="blackjack.html" style="text-decoration: none">Blackjack</a></menuitem>
+          <menuitem><a href="connect4.html" style="text-decoration : none">Connect 4</a></menuitem>
+          <menuitem><a href="snake.html" style="text-decoration: none">Snake</a></menuitem>
+        </menu>
+        </menuitem>
+        <menuitem id="demo3">
+        <a>Random Info</a>
+        <menu>
+          <menuitem><a href="hobbies.html" style="text-decoration: none">Hobbies</a></menuitem>
+          <menuitem><a href="pcspec.html" style="text-decoration: none">PC Specs</a></menuitem>
+          <menuitem><a href="random.html" style="text-decoration: none">Random abt me</a></menuitem>
+        </menu>
+        </menuitem>
+  </nav>
+</head>
+
+<!--NOTE Used to initiate a function when page loads-->
+
+<body onload="loadBjHtml()">
+  <script src="./scripts/bjdeck.js"></script>
+  <div class="navBar">
+    <a class="curPage">Blackjack</a>
+  </div>
+  <div id="headerWrapper" style="margin-top: 20px">
+    <!--Float allows elements to go on the right-->
+    <a href="https://www.youtube.com/watch?v=eyoh-Ku9TCI" target="_blank" style="text-decoration:none"> Welcome to
+      the
+      Table!
+      (gamble responsibly 😁)</a>
+    <br>
+  </div>
+  </div>
+  <!-- Container for dealer cards -->
+  <div>
+    <h1 style="clear: left; margin: 0%">Dealer:</h1>
+    <div id="dWrapperBj">
+      <img style="width: 75px; height: 120px; margin: 20px" class="pokercard" id="dealer1"
+        src="./images/pokercards/backcard.jpg" />
+      <img style="width: 75px; height: 120px; margin: 20px" class="pokercard" id="dealer2"
+        src="./images/pokercards/backcard.jpg" />
+    </div>
+    <p id="dValueText" style="font-size: 20px; margin: 0%">Dealer Hand: ?</p>
+  </div>
+  <!-- Container for player cards -->
+  <div>
+    <h1 style="margin: 0%">Player:</h1>
+    <div id="pWrapperBj">
+      <img style="width: 75px; height: 120px; margin: 20px" class="pokercard" id="player1"
+        src="./images/pokercards/backcard.jpg" />
+      <img style="width: 75px; height: 120px; margin: 20px" class="pokercard" id="player2"
+        src="./images/pokercards/backcard.jpg" />
+    </div>
+    <p id="pValueText" style="font-size: 20px; margin: 0%">Player Hand:</p>
+    <!-- Buttons for player to click -->
+    <button id="hitBjButton" style="margin-left: 20px; margin: 10px" onclick="hitBjHtml()">Hit</button>
+    <button id="standBjButton" onclick="standBjHtml()">Stand</button>
+  </div>
+  <div class="wrapDivAlign">
+    <h1 id="bjstatus" style="color: blue">--Game in progress--</h1>
+    <button id="playBjButton" style="margin-left: 20px" onclick="resetBjHtml()" hidden>Play Again</button>
+  </div>
+</body>
+
+</html>

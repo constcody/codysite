@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://kit.fontawesome.com/557c7a7f4e.js" crossorigin="anonymous"></script>
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<meta charset="utf-8" />
+<title>Cody's Earth</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link href="https://fonts.googleapis.com/css?family=Space+Mono:700&display=swap" rel="stylesheet">
+<link href="cody.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script src="cody.js"></script>
+
+<head>
+  <nav>
+    <menu>
+      <menuitem id="demo1">
+      <a>Menu :)</a>
+      <menu>
+        <menuitem><a href="index.html" style="text-decoration: none">Home Page <i class="fa-solid fa-house"></i></a>
+        </menuitem>
+        <menuitem> <a>Projects</a>
+        <menu>
+          <menuitem><a href="weather.html" style="text-decoration: none">Weather App</a></menuitem>
+          <menuitem><a>Calculator</a></menuitem>
+          <menuitem><a>WIP</a></menuitem>
+        </menu>
+        </menuitem>
+        <menuitem id="demo2">
+        <a>Random Games</a>
+        <menu>
+          <menuitem><a href="blackjack.html" style="text-decoration: none">Blackjack</a></menuitem>
+          <menuitem><a href="connect4.html" style="text-decoration : none">Connect 4</a></menuitem>
+          <menuitem><a href="snake.html" style="text-decoration: none">Snake</a></menuitem>
+        </menu>
+        </menuitem>
+        <menuitem id="demo3">
+        <a>Random Info</a>
+        <menu>
+          <menuitem><a href="hobbies.html" style="text-decoration: none">Hobbies</a></menuitem>
+          <menuitem><a href="pcspec.html" style="text-decoration: none">PC Specs</a></menuitem>
+          <menuitem><a href="random.html" style="text-decoration: none">Random abt me</a></menuitem>
+        </menu>
+        </menuitem>
+  </nav>
+  <style>
+    .name {
+      animation: fadeInOut 5s infinite;
+    }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <h1 class="name">Cody Chen</h1>
+  </div>
+</head>
+<br><br>
+
+<body>
+  <br>
+  <p>An aspiring 19-year-old Software Developer and Student at Hunter College.</p>
+  <br>
+  <br>
+</body>
+
+<div class="socials">
+  <a href="https://open.spotify.com/playlist/7828jfjl1Phm9PzvSL5uP3?si=973b06dfa0c14ec2" target="_blank"
+    style="text-decoration: none"><img src="spotify.svg" />
+    <a href=https://www.linkedin.com/in/cody-chen-296893212 target="_blank" style="text-decoration: none"><img
+        src="linkedin.svg" />
+      <a href=" https://www.instagram.com/constcody/" target="_blank" style="text-decoration: none"><img
+          src="instagram.svg" />
+        <a href="https://github.com/constcody" target="_blank" style="text-decoration: none"><img src="github.svg" />
+          <a href="projects.html"></a>
+</div>
+<br><br>
+
+<div id="time">
+</div>
+<br>
+<div class="container">
+  <div class="quotes"></div>
+  <div class="wrapper">
+    <h2>Favorite Quote<h2>
+        <div class="box">“Believe you can and you're halfway there.” - Theodore Roosevelt</div>
+
+  </div>
+  <br>
+
+  <script>
+    function date() {
+      var getDate = new Date();
+      var Change = getDate.toLocaleString();
+      var post = document.getElementById("time").innerHTML = Change;
+
+    }
+    setInterval(date, 1000);
+  </script>
